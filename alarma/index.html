@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Comming Soon</title>
+	<title>Launchin Soon</title>
 	<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
 	<style type="text/css">
-
 		body{
 			font-family: 'Dosis', sans-serif;
+			/* Photo by NastyaSensei Sens from Pexels */
 			background-image: url('bg.jpg');
 			background-position: center;
 			background-repeat: no-repeat;
@@ -100,10 +100,10 @@
 	
 </head>
 
-<!--- Photo by NastyaSensei Sens from Pexels --->
+
 
 <body>
-	<h1>Set an Alarm, We are launuching in</h1>
+	<h1>Set an Alarm<br> We are launuching in</h1>
 	
 			
 			<div class="countdown">
@@ -130,45 +130,34 @@
 				<p><b>0</b> <br>Seconds </p>
 			</div>
 
-	<h2> Join our Email to get the lastest updates </h2>
+	<h2> Enter your email to get the latest updates</h2>
 
 	<form>
-		<input type="email" placeholder="Enter your Email address">
+		<input type="email" placeholder="Type in your Email Address">
 		<br>
-		<button> Join </button>
+		<button> Get Updates </button>
 	</form>
 </body>
 
 <footer>
 	<script type="text/javascript">
-			// date year,month,day,hour,minutes,seconds
-			const LAUNCH_DATE  = new Date(2019,5,2,2,32).getTime();
-
+			/*
+			Replace the LAUNCH_DATE inputs,(2020,5,2,2,32) , with your LAUNCH Date.
+			Type your LAUNCH DATE as follows: (year,month,day,hour,minutes,seconds)
+			*/
+			const LAUNCH_DATE  = new Date(2020,5,2,2,32).getTime();
 			var units = document.getElementsByTagName("b");
-			
-			function countdown(){
+			setInterval(()=>{
 				let rem = Math.floor((LAUNCH_DATE - new Date().getTime()) / 1000);
-				if(rem < 0){
-					return
-				}
-				units[3].textContent = rem%60
-
+				if(rem < 0){return;}
+				units[3].textContent = rem%60;
 				rem = Math.floor(rem/60);
-				units[2].textContent = rem%60
-
+				units[2].textContent = rem%60;
 				rem = Math.floor(rem/60);
-				units[1].textContent = rem%24
-
+				units[1].textContent = rem%24;
 				units[0].textContent = Math.floor(rem/24);
-	
 				
-			}
-			setInterval(countdown, 1000);
-
-			
-
-
-
+			},1000);
 
 	</script>
 </footer>
