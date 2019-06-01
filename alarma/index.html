@@ -81,31 +81,32 @@
 	<h1>We are Going Live in</h1>
 	
 	<div class="countdown">
-		
+			
+
 			<div class="unit">
 				
-				<i>23 </i>
+				<u></u>
 				<p>Days </p>
 				
 			</div>
 
 			<div class="unit">
 				
-				<i>23 </i>
+				<u></u>
 				<p>Hours </p>
 				
 			</div>
 
 			<div class="unit">
 				
-				<i>23 </i>
+				<u></u>
 				<p>Mins </p>
 				
 			</div>
 
 			<div class="unit">
 				
-				<i>23 </i>
+				<u></u>
 				<p>Seconds </p>
 			</div>
 	</div>
@@ -119,8 +120,32 @@
 
 <footer>
 	<script type="text/javascript">
-		var date = document.getElementsByTagName("i");
-		console.log
+			// date year,month,day,hour,minutes,seconds
+			const LAUNCH_DATE  = new Date(2019,11,10,1).getTime();
+
+			var units = document.getElementsByTagName("u");
+			
+			function countdown(){
+				let rem = Math.floor((LAUNCH_DATE - new Date().getTime()) / 1000);
+				units[3].textContent = rem%60;
+
+				rem = Math.floor(rem/60);
+				units[2].innerHTML = rem%60;
+
+				rem = Math.floor(rem/60);
+				units[1].innerHTML = rem%24;
+
+				rem = Math.floor(rem/24);
+				units[0].innerHTML = rem;
+	
+				
+			}
+			setInterval(countdown, 1000);
+
+			
+
+
+
 
 	</script>
 </footer>
