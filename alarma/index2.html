@@ -3,6 +3,7 @@
 <head>
 	<title>Comming Soon</title>
 	<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<style type="text/css">
 
 		body{
@@ -21,32 +22,23 @@
 		h1{
 			font-weight: normal;
 			font-size: 7vw;
-			margin-top: 10vh;
+			margin-top: 20vh;
+			margin-bottom: 10vh;
 		}
 		h2{
 			font-size: 3vh;
-			margin-top: 5vh;
+			margin-top: 10vh;
 			font-weight: bold;
 		}
 
-		.countdown{
+		div[class='col-sm-2 offset-sm-1']{
 			border-radius: 20px;
-			margin: 3vh 3vw 10vh 3vw;
 			color:#fff;
 			border: 1px solid #fff;
 			text-align: center;
 			font-size: 5vw;
-			display: inline-block;
-			justify-content: center;
-			width: 10vw;
+		}
 
-		}
-		.countdown:nth-child(3){
-			margin-right: 10vw;
-		}
-		.countdown:nth-child(4){
-			margin-left: 10vw;
-		}
 		b{
 			font-size: 5vw;
 			color:#022947;
@@ -57,21 +49,22 @@
 
 
 		form {
-			margin-top: 1vh;
+			margin-top: 3vh;
 			text-align: center;
 		}
 		input {
 			font-family: 'Dosis', sans-serif;
-			background-color: #fff;
+			background-color: transparent;
 			text-align: center;
 			width: 30vw;
-			height: 7vh;
+			height: 5vh;
 			border-color: #0C96FF;
 			border-style: solid;
 			border-width: 0.0vh 0.0vw 0.2vh 0.0vw;
 			transition: 0.5s;
 			font-size: 2vw;
 			color: #1472BA;
+			background-color: #fff;
 			font-weight: bolder;
 		}
 		input:hover{
@@ -86,7 +79,7 @@
 			font-size: 2vw;
 			color : #0C96FF;
 			border: 0.1vh solid #0C96FF;
-			background-color: #fff;
+			
 			margin-top: 3vh;
 			transition: 0.5s;
 			border-radius: 20px;
@@ -103,32 +96,34 @@
 <!--- Photo by NastyaSensei Sens from Pexels --->
 
 <body>
-	<h1>Set an Alarm, We are launuching in</h1>
-	
-			
-			<div class="countdown">
+		<h1>We are Going Live in</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 offset-sm-1">
 				
 				
-				<p><b>0</b> <br>Days </p>
-				
-			</div>
-
-			<div class="countdown">
-				
-				<p><b>0</b> <br>Hours </p>
+				<p><b></b> <br>Days </p>
 				
 			</div>
 
-			<div class="countdown">
+			<div class="col-sm-2 offset-sm-1">
 				
-				<p><b>0</b> <br>Minutes </p>
+				<p><b></b> <br>Hours </p>
 				
 			</div>
 
-			<div class="countdown">
+			<div class="col-sm-2 offset-sm-1">
 				
-				<p><b>0</b> <br>Seconds </p>
+				<p><b></b> <br>Minutes </p>
+				
 			</div>
+
+			<div class="col-sm-2 offset-sm-1">
+				
+				<p><b></b> <br>Seconds </p>
+			</div>
+		</div>
+	</div>
 
 	<h2> Join our Email to get the lastest updates </h2>
 
@@ -142,15 +137,12 @@
 <footer>
 	<script type="text/javascript">
 			// date year,month,day,hour,minutes,seconds
-			const LAUNCH_DATE  = new Date(2019,5,2,2,32).getTime();
+			const LAUNCH_DATE  = new Date(2019,11,10,1).getTime();
 
 			var units = document.getElementsByTagName("b");
 			
 			function countdown(){
 				let rem = Math.floor((LAUNCH_DATE - new Date().getTime()) / 1000);
-				if(rem < 0){
-					return
-				}
 				units[3].textContent = rem%60
 
 				rem = Math.floor(rem/60);
