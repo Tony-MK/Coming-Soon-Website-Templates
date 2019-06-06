@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Launchin Soon</title>
+	<title>Alarma</title>
 	<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
 	<style type="text/css">
 		body{
@@ -29,6 +29,58 @@
 			font-weight: bold;
 		}
 
+		b{
+			font-size: 5vw;
+			color:#022947;
+		}
+		p{
+			font-size: 1.5vw;
+		}
+
+
+		form {
+			margin-top: 1vh;
+			text-align: center;
+		}
+
+		input {
+			font-family: 'Dosis', sans-serif;
+			background-color: #fff;
+			text-align: center;
+			width: 45vw;
+			height: 10vh;
+			border:0;
+			border-bottom: 0.2vh solid #0C96FF;
+			transition: 0.5s;
+			font-size: 4vw;
+			color: #fff;
+			font-weight: bolder;
+			background-color: transparent;
+		}
+
+
+		button{
+
+			padding: 0.5vh 2vw 0.5vh 2vw;
+			font-size: 2vw;
+			color : #0C96FF;
+			border:0;
+			border-bottom: 0.3vh solid #0C96FF;
+			background-color: transparent;
+			margin-top: 3vh;
+			transition: 0.5s;
+			border-radius: 0px;
+			
+		}
+		button:hover{
+			border: 0.3vh solid #0C96FF;
+			cursor: pointer;
+			background-color: #fff;
+			border-radius: 20px;
+			transform: scale(1.1,1.1);
+
+		}
+
 		.countdown{
 			border-radius: 20px;
 			margin: 3vh 3vw 10vh 3vw;
@@ -47,54 +99,8 @@
 		.countdown:nth-child(4){
 			margin-left: 10vw;
 		}
-		b{
-			font-size: 5vw;
-			color:#022947;
-		}
-		p{
-			font-size: 1.5vw;
-		}
-
-
-		form {
-			margin-top: 1vh;
-			text-align: center;
-		}
-		input {
-			font-family: 'Dosis', sans-serif;
-			background-color: #fff;
-			text-align: center;
-			width: 45vw;
-			height: 10vh;
-			border-color: #0C96FF;
-			border-style: solid;
-			border-width: 0.0vh 0.0vw 0.2vh 0.0vw;
-			transition: 0.5s;
-			font-size: 4vw;
-			color: #fff;
-			font-weight: bolder;
-			background-color: transparent;
-		}
-
-		button{
-			text-transform: uppercase;
-			padding: 0.5vh 2vw 0.5vh 2vw;
-			font-size: 2vw;
-			color : #0C96FF;
-			border: 0.3vh solid #0C96FF;
-			background-color: transparent;
-			margin-top: 3vh;
-			transition: 0.5s;
-			border-radius: 0px;
-			
-		}
-		button:hover{
-			cursor: pointer;
-			background-color: transparent;
-			border-radius: 20px;
-			transform: scale(1.1,1.1);
-
-		}
+		
+		
 	</style>
 	
 </head>
@@ -102,39 +108,33 @@
 
 
 <body>
-	<h1>Set Your Alarm, Launch In</h1>
-	
-			
-			<div class="countdown">
-				
-				
-				<p><b>0</b><br>Days </p>
-				
-			</div>
+	<h1>Alarma</h1>
 
-			<div class="countdown">
-				
-				<p><b>0</b> <br>Hours </p>
-				
-			</div>
+	<div class="countdown">
+		<p><b>0</b><br>Days </p>
+	</div>
 
-			<div class="countdown">
-				
-				<p><b>0</b> <br>Minutes </p>
-				
-			</div>
+	<div class="countdown">
+		<p><b>0</b> <br>Hours </p>
+	</div>
 
-			<div class="countdown">
-				
-				<p><b>0</b> <br>Seconds </p>
-			</div>
+	<div class="countdown">
+		
+		<p><b>0</b> <br>Minutes </p>
+		
+	</div>
 
-	<h2>Enter your email to get notified </h2>
+	<div class="countdown">
+		
+		<p><b>0</b> <br>Seconds </p>
+	</div>
+
+	<h2>Type in your email below, to get notified 10 mins before launch</h2>
 
 	<form>
-		<input type="email" placeholder="Type in your Email Address">
+		<input type="email" name="email" placeholder="Enter Email">
 		<br>
-		<button> get notified </button>
+		<button> Enter </button>
 	</form>
 </body>
 
