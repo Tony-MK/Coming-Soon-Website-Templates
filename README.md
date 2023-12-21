@@ -1,3 +1,3 @@
-# Coming-Soon-Website-Templates
+# Coming Soon Website Templates
 
-Website Templates for an upcoming project, business, or idea.
+Responsive website templates to contdown the launch of a website.
